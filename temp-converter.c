@@ -4,7 +4,6 @@
 int main()
 {
     int num = 0;
-    float temp = 0.0;
 
     while (true)
     {
@@ -17,7 +16,7 @@ int main()
 
             float f = (c * 9 / 5) + 32;
 
-            printf("Fahrenheit temperature is %f\n", f);
+            printf("Fahrenheit temperature is %.2f\n", f);
             return 0;
         }
         else if (num == 2)
@@ -29,7 +28,7 @@ int main()
 
             float k = c + 273;
 
-            printf("Kelvin temperature is %f\n", k);
+            printf("Kelvin temperature is %.2f\n", k);
             return 0;
         }
         else if (num == 3)
@@ -41,7 +40,7 @@ int main()
 
             float c = (f - 32) * 5 / 9;
 
-            printf("Celsius temperature is %f\n", c);
+            printf("Celsius temperature is %.2f\n", c);
             return 0;
         }
         else if (num == 4)
@@ -53,7 +52,7 @@ int main()
 
             float k = (f - 32) * 5 / 9 + 273;
 
-            printf("Kelvin temperature is %f\n", k);
+            printf("Kelvin temperature is %.2f\n", k);
             return 0;
         }
         else if (num == 5)
@@ -65,7 +64,7 @@ int main()
 
             float c = k - 273;
 
-            printf("Celsius temperature is %f\n", c);
+            printf("Celsius temperature is %.2f\n", c);
             return 0;
         }
         else if (num == 6)
@@ -77,7 +76,7 @@ int main()
 
             float f = (k - 273) * 9 / 5 + 32;
 
-            printf("Fahrenheit temperature is %f\n", f);
+            printf("Fahrenheit temperature is %.2f\n", f);
             return 0;
         }
         else if (num == 7)
@@ -96,15 +95,11 @@ int main()
             printf("7. Exit\n");
 
             printf("Choice from 1 to 7: ");
-            scanf("%f", &temp);
+            scanf("%d", &num);
 
-            if (temp < 1 || temp > 7)
+            if (num < 1 || num > 7)
             {
-                printf("Enter a valid number from the list\nRetry...\n");
-            }
-            else
-            {
-                num = temp;
+                printf("Enter a valid number from the list\nRetry...");
             }
         }
     }
